@@ -6,3 +6,10 @@
 # in the build directory. This behaviour is entirely configurable,
 # please read the ESP-IDF documents if you need to do this.
 #
+COMPONENT_SRCDIRS := . esp
+
+COMPONENT_SRCS := esp/main.cc
+
+COMPONENT_ADD_INCLUDEDIRS := . esp
+
+# COMPONENT_ADD_LDFLAGS := -lDCMotorController

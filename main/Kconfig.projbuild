@@ -14,9 +14,13 @@ config ESP_WIFI_PASSWORD
 
 config ESP_MOTOR_OUT_A
     int "GPIO Pin A to control motor"
-    default 15
+    default 27
 
 config ESP_MOTOR_OUT_B
     int "GPIO Pin B to control motor"
-    default 16
+    default 26
+
+config ESP_MOTOR_EN
+    int "GPIO Pin B to control motor"
+    default 14
 endmenu
