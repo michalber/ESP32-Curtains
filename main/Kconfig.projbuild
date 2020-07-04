@@ -1,5 +1,5 @@
 # put here your custom config value
-menu "Example Configuration"
+menu "ESP32 Curtain Configuration"
 config ESP_WIFI_SSID
     string "WiFi SSID"
     default "myssid"
@@ -11,4 +11,16 @@ config ESP_WIFI_PASSWORD
     default "mypassword"
     help
 	WiFi password (WPA or WPA2) for the example to use.
+
+config ESP_MOTOR_OUT_A
+    int "GPIO Pin A to control motor"
+    default 27
+
+config ESP_MOTOR_OUT_B
+    int "GPIO Pin B to control motor"
+    default 26
+
+config ESP_MOTOR_EN
+    int "GPIO Pin B to control motor"
+    default 14
 endmenu
