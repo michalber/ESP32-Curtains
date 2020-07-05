@@ -1,4 +1,6 @@
 {
+    "clang-format.executable": "/usr/local/bin/clang-format",
+    "editor.formatOnSave": true,
     "files.associations": {
         "xiosbase": "cpp",
         "string": "cpp"

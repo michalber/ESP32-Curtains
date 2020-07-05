@@ -50,11 +50,10 @@ namespace controller
     void DCMotorController::forward(float duty_cycle = 100.0f)
     {
         ESP_LOGI(TAG, "Forward");
-        esp_err_t err = ESP_OK;
-        err = mcpwm_set_signal_low((mcpwm_unit_t)MOTOR_MCPWM_UNIT, (mcpwm_timer_t)MOTOR_TIMER_UNIT, MCPWM_OPR_B);
-        // err = mcpwm_set_signal_low((mcpwm_unit_t)MOTOR_MCPWM_UNIT, (mcpwm_timer_t)MOTOR_TIMER_UNIT, MCPWM_OPR_A);
-        err = mcpwm_set_duty((mcpwm_unit_t)MOTOR_MCPWM_UNIT, (mcpwm_timer_t)MOTOR_TIMER_UNIT, MCPWM_OPR_A, duty_cycle);
-        err = mcpwm_set_duty_type((mcpwm_unit_t)MOTOR_MCPWM_UNIT, (mcpwm_timer_t)MOTOR_TIMER_UNIT, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); //call this each time, if operator was previously in low/high state
+        mcpwm_set_signal_low((mcpwm_unit_t)MOTOR_MCPWM_UNIT, (mcpwm_timer_t)MOTOR_TIMER_UNIT, MCPWM_OPR_B);
+        // mcpwm_set_signal_low((mcpwm_unit_t)MOTOR_MCPWM_UNIT, (mcpwm_timer_t)MOTOR_TIMER_UNIT, MCPWM_OPR_A);
+        mcpwm_set_duty((mcpwm_unit_t)MOTOR_MCPWM_UNIT, (mcpwm_timer_t)MOTOR_TIMER_UNIT, MCPWM_OPR_A, duty_cycle);
+        mcpwm_set_duty_type((mcpwm_unit_t)MOTOR_MCPWM_UNIT, (mcpwm_timer_t)MOTOR_TIMER_UNIT, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); //call this each time, if operator was previously in low/high state
     }
 
     void DCMotorController::backward(float duty_cycle = 100.0f)
