@@ -1,5 +1,5 @@
-#ifndef __DC_MOTOR_CONTROLLER__
-#define __DC_MOTOR_CONTROLLER__
+#ifndef __DC_MOTOR_CONTROLLER_HXX__
+#define __DC_MOTOR_CONTROLLER_HXX__
 
 #include <stdio.h>
 #include "sdkconfig.h"
@@ -57,4 +57,4 @@ namespace controller
     };
 } // namespace DCMotorController
 
-#endif //__DC_MOTOR_CONTROLLER__
+#endif //__DC_MOTOR_CONTROLLER_HXX__

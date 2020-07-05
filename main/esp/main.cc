@@ -7,8 +7,8 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 
-#include "DCMotorController.hxx"
-
+#include <DCMotorController.hxx>
+#include "ProvisioningService.hxx"
 
 extern "C" {
     void app_main(void);
@@ -16,8 +16,10 @@ extern "C" {
 
 void app_main(void)
 {
+    {
+        service::ProvisioningService provWiFi;
+    }
     controller::DCMotorController motorController;
-    int i = 0;    
     while (1) {
         motorController.softStart(false);
         vTaskDelay(2000 / portTICK_RATE_MS);
