@@ -14,4 +14,4 @@ COMPONENT_SRCS := esp/main.cc \
 
 COMPONENT_ADD_INCLUDEDIRS := . esp
 
-COMPONENT_ADD_LDFLAGS := -lDCMotorController -lProvisioning
+COMPONENT_ADD_LDFLAGS := -lDCMotorController -lProvisioning -lesp-idf-blynk -lBlynkController

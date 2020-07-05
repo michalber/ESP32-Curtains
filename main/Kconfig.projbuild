@@ -43,4 +43,18 @@ config EXAMPLE_PROV_TRANSPORT
     default 1 if EXAMPLE_PROV_TRANSPORT_BLE
     default 2 if EXAMPLE_PROV_TRANSPORT_SOFTAP
 
+config BLYNK_TOKEN
+    string "Blynk token"
+	default "token"
+	help
+		Blynk access token
+
+config BLYNK_SERVER
+    string "Blynk server"
+	default ""
+	help
+		Customize Blynk server address
+
+		Syntax: domain:port
+        
 endmenu
